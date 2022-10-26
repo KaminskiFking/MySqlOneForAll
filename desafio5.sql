@@ -1,0 +1,1 @@
+SELECT c.cancoes AS cancao, COUNT(r.data_de_reproducoes) AS reproducoes FROM SpotifyClone.cancoes AS c INNER JOIN SpotifyClone.reproducoes AS r ON c.cancoes_id = r.cancoes_id GROUP BY cancoes ORDER BY reproducoes DESC, cancoes ASC LIMIT 2;

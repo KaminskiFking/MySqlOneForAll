@@ -4,7 +4,8 @@ DROP DATABASE IF EXISTS SpotifyClone;
 
   CREATE TABLE SpotifyClone.plano(
       planos_id INT PRIMARY KEY AUTO_INCREMENT,
-      planos VARCHAR(45)
+      planos VARCHAR(45),
+      price DECIMAL(5 , 2 )
   ) engine = InnoDB;
 
   CREATE TABLE SpotifyClone.user(
@@ -51,12 +52,12 @@ DROP DATABASE IF EXISTS SpotifyClone;
       PRIMARY KEY (artistas_id, usuario_id)
   ) engine = InnoDB;
 
-	INSERT INTO SpotifyClone.plano (planos)
+	INSERT INTO SpotifyClone.plano (planos, price)
   VALUES
-    ('Gratuito'),
-    ('universitário'),
-    ('pessoal'),
-    ('familiar');
+    ('Gratuito', 0),
+    ('universitário', 5.99),
+    ('pessoal', 6.99),
+    ('familiar', 7.99);
     
     
     INSERT INTO SpotifyClone.artista (artistas)
@@ -94,24 +95,24 @@ DROP DATABASE IF EXISTS SpotifyClone;
 
      INSERT INTO SpotifyClone.user (nome_usuario, planos_id)
   VALUES
-    ('Barbara Liskov', 1),
-    ('Robert Cecil Martin', 2),
-    ('Ada Lovelace', 3),
+	('Barbara Liskov', 1),
+    ('Robert Cecil Martin', 1),
+    ('Ada Lovelace', 4),
     ('Martin Fowler', 4),
-    ('Sandi Metz', 1),
+    ('Sandi Metz', 4),
     ('Paulo Freire', 2),
-    ('Bell Hooks', 3),
-    ('Christopher Alexander', 4),
-    ('Judith Butler', 1),
-    ('Jorge Amado', 2);
+    ('Bell Hooks', 2),
+    ('Christopher Alexander', 3),
+    ('Judith Butler', 3),
+    ('Jorge Amado', 3);
 
     INSERT INTO SpotifyClone.reproducoes (usuario_id ,cancoes_id, data_de_reproducoes)
   VALUES
-	  (1,8,'2022-02-28 10:45:55'),
+	(1,8,'2022-02-28 10:45:55'),
     (1,2,'2020-05-02 05:30:35'),
     (1,10,'2020-03-06 11:22:33'),
     (2,10,'2022-08-05 08:05:17'),
-	  (2,7,'2020-01-02 07:40:33'),
+    (2,7,'2020-01-02 07:40:33'),
     (3,10,'2020-11-13 16:55:13'),
     (3,2,'2020-12-05 18:38:30'),
     (4,8,'2021-08-15 17:10:10'),
@@ -140,4 +141,3 @@ DROP DATABASE IF EXISTS SpotifyClone;
     (6, 4),
 	  (2, 4),
     (6, 3);
-    
