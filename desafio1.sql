@@ -65,9 +65,9 @@ DROP DATABASE IF EXISTS SpotifyClone;
     ('Beyoncé'),
     ('Queen'),
     ('Elis Regina'),
-    ('Nina Simone'),
+    ('Baco Exu do Blues'),
     ('Blind Guardian'),
-    ('Baco Exu do Blues');
+    ('Nina Simone');
     
     INSERT INTO SpotifyClone.album (albuns_id, albuns, artistas_id)
   VALUES
@@ -125,19 +125,19 @@ DROP DATABASE IF EXISTS SpotifyClone;
     (9,9,'2022-02-24 21:14:22'),
     (10,3,'2015-12-13 08:30:22');
 
-    INSERT INTO SpotifyClone.seguidores (artistas_id, usuario_id)
+    INSERT INTO SpotifyClone.seguidores (usuario_id, artistas_id)
   VALUES
-    (3, 3),
-    (5, 3),
-    (2, 3),
-    (1, 3),
-	  (1, 2),
-    (3, 2),
-	  (2, 2),
-    (4, 2),
-    (4, 4),
-    (5, 2),
-    (6, 5),
-    (6, 4),
-	  (2, 4),
-    (6, 3);
+    (1,1),
+	  (1,2),
+	  (1,3),
+	  (2,1),
+	  (2,3),
+	  (3,2),
+	  (4,4),
+	  (5,5),
+	  (5,6),
+	  (6,6),
+	  (6,1),
+	  (7,6),
+	  (9,3),
+	  (10,2);
