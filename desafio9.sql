@@ -1,0 +1,1 @@
+SELECT COUNT(r.cancoes_id) AS "quantidade_musicas_no_historico" FROM SpotifyClone.reproducoes AS r WHERE r.usuario_id = 1;
