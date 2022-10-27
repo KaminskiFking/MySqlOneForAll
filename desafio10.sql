@@ -1,0 +1,1 @@
+SELECT c.cancoes AS nome, COUNT(r.usuario_id) as reproducoes FROM SpotifyClone.cancoes AS c INNER JOIN SpotifyClone.reproducoes AS r ON c.cancoes_id = r.cancoes_id INNER JOIN SpotifyClone.user AS u ON u.usuario_id = r.usuario_id WHERE u.planos_id in(1,3) GROUP BY cancoes ORDER BY nome ASC;

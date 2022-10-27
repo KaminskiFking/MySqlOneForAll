@@ -83,7 +83,7 @@ DROP DATABASE IF EXISTS SpotifyClone;
     INSERT INTO SpotifyClone.cancoes (cancoes, albuns_id, duração_segundos)
   VALUES
     ('BREAK MY SOUL', 1, 279),
-    ("VIRGO'S GRAVES", 1, 369),
+    ("VIRGO’S GROOVE", 1, 369),
     ('ALIEN SUPERSTAR', 1, 116),
     ("Don’t Stop Me Now", 2, 203),
     ("Under Pressure", 3, 152),
